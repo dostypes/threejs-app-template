@@ -1,0 +1,28 @@
+# Cline Rules for threejs-app-template
+
+## Core Principles
+
+1.  **Memory Bank is Primary:** ALWAYS start by reading ALL files in the `memory-bank/` directory (`projectbrief.md`, `productContext.md`, `activeContext.md`, `systemPatterns.md`, `techContext.md`, `progress.md`) to understand the current context, goals, and progress. Update these files, especially `activeContext.md` and `progress.md`, after making significant changes or completing tasks.
+2.  **Template Focus:** Remember this project serves as a **template**. Changes should maintain or enhance its clarity and reusability for demonstrating the integration of Three.js with UI and services.
+3.  **Architecture Adherence:** Respect the `AppBrain` architecture.
+    - `AppBrain` is the central orchestrator.
+    - Maintain strict separation between `ui`, `services`, and `three` modules.
+    - Modules should not communicate directly.
+
+## Communication Patterns
+
+1.  **Events In, Methods Out:**
+    - Events flow _towards_ `AppBrain` from managers (`UIManager`, `ServicesManager`, `ThreeManager`) that detect external changes or user/3D interactions. Use `EventEmitter`.
+    - Method calls flow _outwards_ from `AppBrain` to command specific actions in `UIManager` and `ThreeManager`.
+2.  **Semantic Events:** Ensure events emitted represent meaningful application actions (e.g., `servicesChange`, `uiAction`, `objectSelected`).
+
+## Development Practices
+
+1.  **Coding Style:** Adhere to the preferences outlined in `memory-bank/techContext.md` (ES Modules, `const`/`let`, single quotes, no semicolons, arrow functions, naming conventions, etc.).
+2.  **Modularity:** Keep classes and functions focused and concise. Encapsulate logic within the appropriate module (`ui`, `services`, `three`).
+3.  **Dependencies:** Use Node.js `events` for `EventEmitter`. Be mindful of browser environment constraints.
+
+## Task Execution
+
+1.  **Plan First:** Before making changes, briefly outline the plan and how it fits the existing architecture.
+2.  **Update Memory:** After implementing changes, update the relevant memory bank files to reflect the new state.
