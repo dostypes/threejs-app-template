@@ -1,5 +1,7 @@
 # Three.js Application Template with AppBrain Architecture
 
+**Live Demo:** [https://dostypes.github.io/threejs-app-template/](https://dostypes.github.io/threejs-app-template/)
+
 ## Overview
 
 This project provides a reusable template demonstrating a robust and scalable architecture for building interactive Three.js applications that integrate with user interfaces (HTML/CSS/JS) and external services (simulated). It addresses the common challenge of managing communication and state between these distinct parts of an application.
