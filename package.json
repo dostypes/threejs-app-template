@@ -1,0 +1,24 @@
+{
+  "name": "threejs-app-template",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "events": "^3.3.0",
+    "three": "^0.175.0",
+    "tone": "^15.0.4"
+  },
+  "devDependencies": {
+    "vite": "6.2.3",
+    "vite-plugin-glsl": "1.4.0"
+  },
+  "keywords": [],
+  "author": "dostypes (https://github.com/dostypes)",
+  "license": "MIT"
+}
